@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1240px !important;
+}
+
+.header-top {
+	background: #1E2321;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.header-top-row {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-block {
+	display: flex;
+}
+
+.info-block_item {
+	display: flex;
+	align-items: center;
+	margin-right: 25px;
+}
+
+.info-block_item:last-child {
+	margin-right: 0;
+}
+
+.info-block_item img {
+	margin-right: 16px;
+}
+
+.info-block p,
+.info-block a {
+	max-width: 200px;
+	font: normal normal 13px/15px Gilroy;
+	color: #FFFFFF;
+	margin-bottom: 0;
+	text-decoration: none;
+}
+
+.header-lang-title,
+.lang a {
+    width: 44px;
+    height: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: transparent;
+    border-radius: 5px;
+    font: normal normal 15px/17px Gilroy;
+    text-transform: uppercase;
+    color: #595C5B;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.lang a {
+    color: #000;
+}
+
+.lang li {
+    list-style-type: none;
+}
+
+.lang {
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.header-lang-dropdown {
+    display: none;
+}
+
+.header-lang-dropdown.active {
+    background: #fff;
+    border-radius: 5px;
+    position: absolute; 
+    margin-top: 5px;
+    z-index: 2;
+}
+
+.header-left,
+.header-right,
+.header-row {
+    display: flex;
+    align-items: center;
+}
+
+.header-row {
+    justify-content: space-between;
+} 
+
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.menu {
+    list-style-type: none;
+    align-items: center;
+}
+
+.menu li {
+    margin-right: 29px;
+    position: relative;
+}
+
+.menu li:last-child {
+    margin-right: 0px;
+}
+
+.menu a {
+    font: normal normal 15px/17px Gilroy;
+    text-transform: uppercase;
+    color: #595C5B;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+.menu li.active a,
+.menu li:hover a,
+.menu li:active a,
+.menu li:focus a {
+    font: normal 600 15px/18px Gilroy;
+}
+
+.menu li.active::after,
+.menu li:hover::after,
+.menu li:active::after,
+.menu li:focus::after {
+    content: '';
+    width: 42px;
+    height: 3px;
+    background: #0F422A;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -7px;
+}
+
+.search {
+    background: #F9F9F9;
+    border: 1px solid rgba(235, 239, 243, 0.33);
+    box-sizing: border-box;
+    border-radius: 7px;
+    padding: 11px 15px 10px 19px;
+    outline: none;
+}
+
+.search::placeholder {
+    font: normal normal 16px/19px Gilroy;
+    color: #D0D0D0;
+}
+
+.header-search {
+    margin-right: 37px;
+}
+
+.header-search form {
+    position: relative;
+}
+
+.search-button {
+    background: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 15px;
+    top: 25%;
+}
+
+/*  //header */
+
+.banner-section-left {
+    flex: 0 1 60%;
+}
+
+.banner-section-right {
+    flex: 0 1 40%;
+}
+
+.banner-section-text {
+    font: normal normal 18px/27px Gilroy;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.banner-section-name {
+    font: normal 600 20px/33px Gilroy;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+.banner-section-link {
+    font: normal normal 16px/27px Gilroy;
+    color: #FFFFFF;
+    background: #AA7530;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 212px;
+    padding: 14px 0px;
+    text-decoration: none;
+}
+
+.banner-section-content {
+    max-width: 516px;
+}
+
+.banner-section-content-wrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.banner-section-left {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.banner-section-box {
+    position: relative;
+    width: 50%;
+}
+
+.banner-section-box img {
+    width: 100%;
+}
+
+.banner-section-box-link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 41px 0px;
+    font: nomal normal 20px/23px Gilroy;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.banner-section-box-link-1 {
+    background: #135334;
+}
+
+.banner-section-box-link-2 {
+    background: #000000;
+}
