@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>КЦМР</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/media.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link href = "assets/fonts/gilroy/stylesheet.css" rel = "stylesheet" type = "text/css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="header-top">
@@ -17,7 +23,7 @@
 					<div class="info-block">
 						<div class="info-block_item">
 							<img src="assets/images/icons/map-pin.svg">
-							<p>
+							<p class="info-block_item-pin">
 								Республика Казахстан, г. Алматы, мкр-н Коктем-3, д. 21
 							</p>
 						</div>
@@ -74,6 +80,37 @@
 						<a href="/">
 							<img src="assets/images/logo.png" alt="logo">
 						</a>
+
+						<div class="burger-wrap">
+							<div class="header-lang">                    
+								<div class="header-lang-title">
+									Рус				
+									<svg class="header-lang-title-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(0deg); transition: all 0.3s ease 0s;">
+										<path d="M6 9L12 15L18 9" stroke="#595C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+									</svg>
+								</div>
+						
+								<div class="header-lang-dropdown">
+									<ul class="lang">
+										<li>
+											<a href="/">ru</a>
+										</li>
+
+										<li>
+											<a href="#">kz</a>
+										</li>
+
+										<li>
+											<a href="#">en</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="burger-icon">
+			                    <div class="hamburger"></div>
+			                </div>
+						</div>
 					</div>
 
 					<nav class="header-menu">
@@ -119,8 +156,8 @@
 				
 				<div class="header-right">
 					<div class="header-search">
-						<form class="d-flex">
-					        <input class="search" type="search" placeholder="Поиск" aria-label="Search">
+						<form class="d-flex header-search-form">
+					        <input class="search" id="search" type="search" placeholder="Поиск" aria-label="Search">
 					        <button class="search-button" type="submit">
 					        	<img src="assets/images/icons/search.svg">
 					        </button>
@@ -151,62 +188,726 @@
 							</ul>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
 
+		<div class="burger-dropdown">
+			<div class="container">
+				<div class="burger-dropdown-row">
+					<nav class="header-menu d-block">
+						<ul class="menu d-flex">
+							<li class="active">
+								<a href="/">
+									Главная
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									Услуги
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									О нас
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									Проекты
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									Закупки
+								</a>
+							</li>
+
+							<li>
+								<a href="#">
+									Новости
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="header-right header-right-dropdown d-block">
+						<div class="header-search">
+							<form class="d-flex">
+						        <input class="search" type="search" placeholder="Поиск" aria-label="Search">
+						        <button class="search-button" type="submit">
+						        	<img src="assets/images/icons/search.svg">
+						        </button>
+						     </form>
+						</div>
+					</div>
+
+					<div class="header-top-row d-flex bg-black">
+						<div class="header-top-left">
+							<div class="info-block">
+								<div class="info-block_item">
+									<img src="assets/images/icons/map-pin.svg">
+									<p>
+										Республика Казахстан, г. Алматы, мкр-н Коктем-3, д. 21
+									</p>
+								</div>
+
+								<div class="info-block_item">
+									<img src="assets/images/icons/phone.svg">
+									<a href="#">
+										+7 (727) 250-67-22
+									</a>					
+								</div>
+
+								<div class="info-block_item">
+									<img src="assets/images/icons/at-sign.svg">
+									<a href="#">
+										info@kisc.kz
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="header-top-right">
+							<div class="info-block">
+								<div class="info-block_item">
+									<img src="assets/images/icons/bx_bxs-moon.svg">
+									<p>
+										Темный режим
+									</p>
+								</div>
+
+								<div class="info-block_item">
+									<img src="assets/images/icons/eye.svg">
+									<p>
+										Версия для слабовидящих
+									</p>
+								</div>
+
+								<div class="info-block_item">
+									<img src="assets/images/icons/feedback.png">
+									<p>
+										Обратная связь
+									</p>
+								</div>
+							</div>	
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 
 	<div class="banner-section">
-		<div class="banner-section-row d-flex">
-			<div class="banner-section-left" style="background-image: url(assets/images/banner.png);">
-				<div class="banner-section-content-wrap">
-					<div class="banner-section-content">
-						<p class="banner-section-text">
-							Приветствую Вас на официальном сайте Республиканского государственного предприятия на праве хозяйственного ведения «Казахстанский центр межбанковских расчетов Национального Банка Республики Казахстан».
-							Надеюсь, что благодаря данной площадке мы сможем в конструктивном ключе обсуждать волнующие вас вопросы деятельности и организации работы нашего предприятия.
-							Обещаю, что ваши отклики, замечания и предложения всегда будут услышаны нами.
-							Уверен, что данная блог-платформа станет эффективным инструментом нашей совместной работы.
-						</p>
 
-						<p class="banner-section-name">
-							МУСАЕВ РУСЛАН НАРИМАНОВИЧ 
-						</p>
+		<div class="banner-section-row">
+			<div class="banner-section-left" style="background-image: url(assets/images/banner-2.png);">
+				<div class="container">
+					<div class="banner-section-content-wrap">
+						<div class="banner-section-content">
+							<p class="banner-section-name">
+								О нас
+							</p>
 
-						<p class="banner-section-name">
-							Руководитель КЦМР
-						</p>
+							<p class="banner-section-text">
+								Республиканское государственное предприятие на праве хозяйственного ведения КЦМР создано на основании решения Правления Национального Банка test
 
-						<a href="#" class="banner-section-link">
-							Подробнее
-						</a>
+							</p>
+							
+							<a href="#" class="banner-section-link">
+								Подробнее
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="banner-slider-arrow banner-button-prev">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.875 4.75L7.125 9.5L11.875 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+			</div>
+
+			<div class="banner-section-right d-flex">
+				<!-- <div class="banner-section-button-group">
+					<div class="banner-slider-arrow banner-button-prev">
+	                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+	                    <path d="M11.875 4.75L7.125 9.5L11.875 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+	                    </svg>
+                	</div>
+
+                	<div class="banner-slider-arrow banner-button-next">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.125 14.25L11.875 9.5L7.125 4.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+				</div> -->
+				<div class="swiper banner-slider">
+					<div class="banner-slider-arrow banner-button-next">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.125 14.25L11.875 9.5L7.125 4.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+					<div class="swiper-wrapper">
+						
+						<div class="swiper-slide">
+							<div class="banner-section-box">
+								<img src="assets/images/card/banner-3.png">
+
+								<a href="#" class="banner-section-box-link banner-section-box-link-1 text-center">
+									<span>
+										Центр обмена<br> идентификационными данными
+									</span>
+								</a>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="banner-section-box">
+								<img src="assets/images/card/banner-4.png">
+
+								<a href="#" class="banner-section-box-link banner-section-box-link-2 text-center">
+									ISO 20022
+								</a>
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class="banner-section-box">
+								<img src="assets/images/card/banner-3.png">
+
+								<a href="#" class="banner-section-box-link banner-section-box-link-1 text-center">
+									<span>
+										Центр обмена<br> идентификационными данными
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- <div class="banner-section-row d-flex">
+			<div class="banner-section-left" style="background-image: url(assets/images/banner-2.png);">
+				<div class="container">
+					<div class="banner-section-content-wrap">
+						<div class="banner-section-content">
+							<p class="banner-section-name">
+								О нас
+							</p>
+
+							<p class="banner-section-text">
+								Республиканское государственное предприятие на праве хозяйственного ведения КЦМР создано на основании решения Правления Национального Банка test
+
+							</p>
+							
+							<a href="#" class="banner-section-link">
+								Подробнее
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="banner-section-right d-flex">
 				<div class="banner-section-box">
-					<img src="assets/images/card/banner-1.png">
+					<img src="assets/images/card/banner-3.png">
 
 					<a href="#" class="banner-section-box-link banner-section-box-link-1 text-center">
-						О нас
+						<span>
+							Центр обмена<br> идентификационными данными
+						</span>
 					</a>
 				</div>
 
 				<div class="banner-section-box">
-					<img src="assets/images/card/banner-2.png">
+					<img src="assets/images/card/banner-4.png">
 
 					<a href="#" class="banner-section-box-link banner-section-box-link-2 text-center">
 						ISO 20022
 					</a>
 				</div>
 			</div>
+		</div> -->
+	</div>
+
+	<div class="services-section">
+		<div class="container">
+			<div class="services-row">
+				<h1 class="block-titles">
+					Услуги
+				</h1>
+
+				<div class="services-button d-flex">
+					<div class="services-slider-arrow services-slider-prev">
+						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M11.875 4.75L7.125 9.5L11.875 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+					<div class="services-slider-arrow services-slider-next">
+						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7.125 14.25L11.875 9.5L7.125 4.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Swiper -->
+	    <div class="swiper services-slider">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="assets/images/card/services-1.png" alt="">	
+					<div class="services-slide-content">
+						<h3 class="services-slide-content-title">
+							Сервисное бюро SWIFT
+						</h3>
+
+						<a href="#" class="services-slide-content-link">
+							Подробнее
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="assets/images/card/services-2.png" alt="">
+					<div class="services-slide-content">
+						<h3 class="services-slide-content-title">
+							Сервисное бюро SWIFT
+						</h3>
+
+						<a href="#" class="services-slide-content-link">
+							Подробнее
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="assets/images/card/services-3.png" alt="">
+					<div class="services-slide-content">
+						<h3 class="services-slide-content-title">
+							Сервисное бюро SWIFT
+						</h3>
+
+						<a href="#" class="services-slide-content-link">
+							Подробнее
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="assets/images/card/services-4.png" alt="">
+					<div class="services-slide-content">
+						<h3 class="services-slide-content-title">
+							Сервисное бюро SWIFT
+						</h3>
+
+						<a href="#" class="services-slide-content-link">
+							Подробнее
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="assets/images/card/services-5.png" alt="">
+					<div class="services-slide-content">
+						<h3 class="services-slide-content-title">
+							Сервисное бюро SWIFT
+						</h3>
+
+						<a href="#" class="services-slide-content-link">
+							Подробнее
+						</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide">
+					<img src="assets/images/card/services-1.png" alt="">
+					<div class="services-slide-content">
+						<h3 class="services-slide-content-title">
+							Сервисное бюро SWIFT
+						</h3>
+
+						<a href="#" class="services-slide-content-link">
+							Подробнее
+						</a>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>
+
+	<div class="news-section">
+		<div class="container">
+			<h1 class="block-titles">
+				Новости
+			</h1>
+			<div class="news-row">
+				<!-- Swiper -->
+			    <div class="swiper news-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide ">
+							<div class="card news-item">
+								<a href="#">
+									<img src="assets/images/card/news-1.png" class="card-img-top" alt="news">
+								</a>
+
+	    						<div class="card-body">
+			        				<p class="news-date">
+			        					27 сентября 2021
+			        				</p>
+							        <a href="#" class="news-name">
+							        	В связи со сложившейся ситуацией с пандемией COVID-19
+							    	</a>
+							    </div>
+						    </div>
+						</div>
+
+						<div class="swiper-slide card news-item">
+							<div class="card news-item">
+								<a href="#">
+									<img src="assets/images/card/news-2.png" class="card-img-top" alt="news">
+								</a>
+
+	    						<div class="card-body">
+			        				<p class="news-date">
+			        					27 сентября 2021
+			        				</p>
+							        <a href="#" class="news-name">
+							        	Состоялась встреча пользователей платежных...
+							    	</a>
+							    </div>
+							</div>
+						</div>
+
+						<div class="swiper-slide card news-item">
+							<div class="card news-item">
+								<a href="#">
+									<img src="assets/images/card/news-3.png" class="card-img-top" alt="news">
+								</a>
+
+	    						<div class="card-body">
+			        				<p class="news-date">
+			        					27 сентября 2021
+			        				</p>
+							        <a href="#" class="news-name">
+							        	Состоялась встреча пользователей платежных...
+							    	</a>
+							    </div>
+							</div>    
+						</div>
+
+						<div class="swiper-slide card news-item">
+							<div class="card news-item">
+								<a href="#">
+									<img src="assets/images/card/news-1.png" class="card-img-top" alt="news">
+								</a>
+
+	    						<div class="card-body">
+			        				<p class="news-date">
+			        					27 сентября 2021
+			        				</p>
+							        <a href="#" class="news-name">
+							        	В связи со сложившейся ситуацией с пандемией COVID-19
+							    	</a>
+							    </div>
+							</div>    
+						</div>
+
+						<div class="swiper-slide card news-item">
+							<div class="card news-item">
+								<a href="#">
+									<img src="assets/images/card/news-2.png" class="card-img-top" alt="news">
+								</a>
+
+	    						<div class="card-body">
+			        				<p class="news-date">
+			        					27 сентября 2021
+			        				</p>
+							        <a href="#" class="news-name">
+							        	В связи со сложившейся ситуацией с пандемией COVID-19
+							    	</a>
+							    </div>
+							</div>    
+						</div>
+					</div>
+					<div class="news-pagination"></div>
+			    </div>
+			</div>
 		</div>
 	</div>
-    
+
+	<div class="mainPage-contacts-row-section">
+		<div class="container">
+			<div class="mainPage-contacts-row d-flex">
+				<div class="mainPage-contacts-left">
+					<h1 class="block-titles">
+						Контакты
+					</h1>
+
+					<ul class="contacts">
+						<li>
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M35 16.668C35 28.3346 20 38.3346 20 38.3346C20 38.3346 5 28.3346 5 16.668C5 12.6897 6.58035 8.87441 9.3934 6.06137C12.2064 3.24832 16.0218 1.66797 20 1.66797C23.9782 1.66797 27.7936 3.24832 30.6066 6.06137C33.4196 8.87441 35 12.6897 35 16.668Z" stroke="#595C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M20 21.668C22.7614 21.668 25 19.4294 25 16.668C25 13.9065 22.7614 11.668 20 11.668C17.2386 11.668 15 13.9065 15 16.668C15 19.4294 17.2386 21.668 20 21.668Z" stroke="#595C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<p>
+								<span>
+									Адрес
+								</span><br>
+								Республика Казахстан,
+								г. Алматы, мкр-н Коктем-3, д. 21
+							</p>
+						</li>
+
+						<li>
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M36.6666 28.1989V33.1989C36.6685 33.663 36.5734 34.1225 36.3875 34.5478C36.2015 34.9731 35.9288 35.3548 35.5868 35.6686C35.2447 35.9824 34.8409 36.2213 34.4012 36.37C33.9615 36.5187 33.4956 36.574 33.0333 36.5322C27.9047 35.9749 22.9783 34.2224 18.65 31.4155C14.623 28.8566 11.2089 25.4425 8.64997 21.4155C5.83327 17.0675 4.08037 12.1172 3.5333 6.96553C3.49165 6.50464 3.54643 6.04013 3.69414 5.60157C3.84185 5.16301 4.07925 4.76001 4.39125 4.41823C4.70324 4.07645 5.08298 3.80338 5.50629 3.6164C5.9296 3.42942 6.3872 3.33263 6.84997 3.33219H11.85C12.6588 3.32423 13.443 3.61066 14.0562 4.13808C14.6695 4.6655 15.0701 5.39794 15.1833 6.19886C15.3943 7.79897 15.7857 9.37007 16.35 10.8822C16.5742 11.4787 16.6227 12.1271 16.4898 12.7503C16.3569 13.3736 16.0481 13.9457 15.6 14.3989L13.4833 16.5155C15.8559 20.6881 19.3107 24.1429 23.4833 26.5155L25.6 24.3989C26.0531 23.9508 26.6252 23.6419 27.2485 23.509C27.8718 23.3761 28.5201 23.4246 29.1166 23.6489C30.6288 24.2131 32.1999 24.6045 33.8 24.8155C34.6096 24.9297 35.349 25.3375 35.8775 25.9614C36.4061 26.5852 36.6869 27.3815 36.6666 28.1989Z" stroke="#595C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<p>
+								<span>
+									Телефон
+								</span><br>
+								<a href="tel:+77272506722" class="contacts-link">
+									+7 (727) 250-67-22
+								</a>
+							</p>
+						</li>
+
+						<li>
+							<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.66634 6.66797H33.333C35.1663 6.66797 36.6663 8.16797 36.6663 10.0013V30.0013C36.6663 31.8346 35.1663 33.3346 33.333 33.3346H6.66634C4.83301 33.3346 3.33301 31.8346 3.33301 30.0013V10.0013C3.33301 8.16797 4.83301 6.66797 6.66634 6.66797Z" stroke="#595C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M36.6667 10L20 21.6667L3.33334 10" stroke="#595C5B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+
+							<p>
+								<span>
+									Электронная почта
+								</span><br>
+								<a href="mailto:info@kisc.kz" class="contacts-link">
+									info@kisc.kz
+								</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mainPage-contacts-right">
+					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A4c33b1b138f983b0c1d5580a2a312e390e1fc13dbf03fa8e38105b1c80b8f0c9&amp;source=constructor" width="100%" height="431" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container">
+			<div class="footer-row row">
+				<div class="footer-logo col-md-2">
+					<a href="/">
+						<img src="assets/images/footer-logo.png">
+					</a>
+					
+					<p class="logo-desc">
+						КЦМР является самостоятельным хозяйствующим субъектом, небанковским финансовым учреждением.
+					</p>
+				</div>
+
+				<nav class="footer-menu d-flex col-md-8">
+					<div class="footer-menu-left d-flex">
+						<div class="footer-menu-item">
+							<h2 class="menu-title">Услуги</h2>
+							<ul class="menu"> 
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Карточные платежи
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Удостоверяющий центр
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Сервисное бюро SWIFT
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Розничные платежи
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Обмен сообщениями
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										 Национальный клиринг
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-menu-item">
+							<h2 class="menu-title">Сайт</h2>
+							<ul class="menu"> 
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Главная 
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Услуги
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										О нас
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Закупки 
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Новости 
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Контакты
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div class="footer-menu-right d-flex">
+						<div class="footer-menu-item">
+							<h2 class="menu-title">Платежные системы</h2>
+							<ul class="menu"> 
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										МСПД
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Клиринг
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										СМЭП
+									</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="footer-menu-item">
+							<h2 class="menu-title">Полезные материалы</h2>
+							<ul class="menu"> 
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										Статистика  
+									</a>
+								</li>
+
+								<li>
+									<a href="#" class="footer-menu_link">
+										<img src="assets/images/icons/footer-menu-arrow.svg" alt="arrow">
+										eGOV
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+
+				<div class="footer-contacts col-md-2">
+					<ul class="footer-contacts-menu"> 
+						<h2 class="menu-title">Контакты</h2>
+						<li>
+							<p class="footer-menu_link footer-menu_link-address">					
+								<span>
+									<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M14.875 7.08203C14.875 12.0404 8.5 16.2904 8.5 16.2904C8.5 16.2904 2.125 12.0404 2.125 7.08203C2.125 5.39128 2.79665 3.76977 3.99219 2.57423C5.18774 1.37868 6.80924 0.707031 8.5 0.707031C10.1908 0.707031 11.8123 1.37868 13.0078 2.57423C14.2033 3.76977 14.875 5.39128 14.875 7.08203Z" stroke="#A8A8A8" stroke-linecap="round" stroke-linejoin="round"/>
+									<path d="M8.5 9.20703C9.6736 9.20703 10.625 8.25564 10.625 7.08203C10.625 5.90843 9.6736 4.95703 8.5 4.95703C7.32639 4.95703 6.375 5.90843 6.375 7.08203C6.375 8.25564 7.32639 9.20703 8.5 9.20703Z" stroke="#A8A8A8" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</span>
+								Республика Казахстан,
+								г. Алматы, мкр-н Коктем-3, д. 21
+							</p>
+						</li>
+
+						<li>
+							<a href="tel: +77272506722" class="footer-menu_link">
+								<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.5834 11.9864V14.1114C15.5842 14.3086 15.5438 14.5039 15.4647 14.6847C15.3857 14.8654 15.2698 15.0277 15.1244 15.161C14.9791 15.2944 14.8075 15.3959 14.6206 15.4591C14.4337 15.5223 14.2357 15.5458 14.0392 15.528C11.8596 15.2912 9.76584 14.5464 7.9263 13.3535C6.21485 12.2659 4.76383 10.8149 3.6763 9.10346C2.47921 7.25556 1.73423 5.15166 1.50172 2.9622C1.48402 2.76633 1.5073 2.56891 1.57008 2.38252C1.63285 2.19613 1.73375 2.02486 1.86635 1.8796C1.99894 1.73435 2.16033 1.61829 2.34024 1.53882C2.52015 1.45936 2.71463 1.41822 2.9113 1.41804H5.0363C5.38006 1.41465 5.71332 1.53638 5.97397 1.76054C6.23461 1.98469 6.40486 2.29598 6.45297 2.63637C6.54266 3.31642 6.709 3.98414 6.9488 4.62679C7.04411 4.88032 7.06473 5.15585 7.00824 5.42074C6.95174 5.68564 6.8205 5.92878 6.63005 6.12137L5.73047 7.02095C6.73882 8.7943 8.20713 10.2626 9.98047 11.271L10.8801 10.3714C11.0726 10.1809 11.3158 10.0497 11.5807 9.99319C11.8456 9.93669 12.1211 9.95732 12.3746 10.0526C13.0173 10.2924 13.685 10.4588 14.3651 10.5485C14.7091 10.597 15.0234 10.7703 15.248 11.0354C15.4726 11.3006 15.592 11.639 15.5834 11.9864Z" stroke="#A8A8A8" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+
+								+7 (727) 250-67-22
+							</a>
+						</li>
+
+						<li>
+							<a href="mailto:info@kisc.kz" class="footer-menu_link">
+								<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.49996 11.3346C10.0648 11.3346 11.3333 10.0661 11.3333 8.5013C11.3333 6.9365 10.0648 5.66797 8.49996 5.66797C6.93515 5.66797 5.66663 6.9365 5.66663 8.5013C5.66663 10.0661 6.93515 11.3346 8.49996 11.3346Z" stroke="#A8A8A8" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M11.3333 5.66667V9.20834C11.3333 9.77192 11.5572 10.3124 11.9557 10.7109C12.3542 11.1095 12.8947 11.3333 13.4583 11.3333C14.0219 11.3333 14.5624 11.1095 14.9609 10.7109C15.3594 10.3124 15.5833 9.77192 15.5833 9.20834V8.50001C15.5832 6.90132 15.0423 5.34968 14.0485 4.09738C13.0548 2.84509 11.6666 1.96579 10.1098 1.60247C8.5529 1.23914 6.91892 1.41316 5.4735 2.09623C4.02809 2.77929 2.85625 3.93123 2.14852 5.36473C1.4408 6.79823 1.23882 8.42899 1.57542 9.99184C1.91202 11.5547 2.76741 12.9577 4.0025 13.9728C5.23758 14.9878 6.77973 15.5553 8.37818 15.5827C9.97663 15.6102 11.5374 15.0962 12.8066 14.1242" stroke="#A8A8A8" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+
+								info@kisc.kz
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
